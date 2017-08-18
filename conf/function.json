@@ -1,0 +1,110 @@
+{
+  "total": [
+    "Category",
+    "Radar",
+    "Page_Name",
+    "Reference_URL",
+    "Geo_Locale_URL",
+    "Notes",
+    "WS_ID",
+    "WS_Task",
+    "Words_to_Translate",
+    "Words_to_Edit",
+    "Total_Words",
+    "Assignee",
+    "Fresh_Eye",
+    "CD_Review",
+    "Type",
+    "Over_due_date",
+    "Writer_ISV",
+    "CD_ISV",
+    "Art_CD_ISV",
+    "XF_ISV",
+    "Graphic"
+  ],
+  "For XF": [
+    "Category",
+    "Page_Name",
+    "Reference_URL",
+    "Geo_Locale_URL",
+    "Assignee",
+    "XF_ISV"
+  ],
+  "For Art CD": [
+    "Category",
+    "Page_Name",
+    "Reference_URL",
+    "Geo_Locale_URL",
+    "Art_CD_ISV"
+  ],
+  "For Producer": [
+    "Category",
+    "Radar",
+    "Page_Name",
+    "Reference_URL",
+    "Geo_Locale_URL",
+    "Assignee",
+    "Fresh_Eye",
+    "CD_Review",
+    "Over_due_date"
+  ],
+  "For CD": [
+    "Category",
+    "Radar",
+    "Page_Name",
+    "Reference_URL",
+    "Geo_Locale_URL",
+    "CD_Review",
+    "CD_ISV"
+  ],
+  "For MPM": [
+    "Category",
+    "Radar",
+    "Page_Name",
+    "Reference_URL",
+    "Geo_Locale_URL",
+    "Notes",
+    "WS_ID",
+    "WS_Task",
+    "Total_Words",
+    "Assignee",
+    "CD_Review",
+    "Type",
+    "Writer_ISV"
+  ],
+  "For CPM": [
+    "Total_Words",
+    "Assignee",
+    "CD_Review",
+    "Type",
+    "Writer_ISV"
+  ],
+  "For Writer/Editor": [
+    "Category",
+    "Radar",
+    "Page_Name",
+    "Reference_URL",
+    "Geo_Locale_URL",
+    "Words_to_Translate",
+    "Words_to_Edit",
+    "Total_Words",
+    "Assignee",
+    "Writer_ISV"
+  ],
+  "For Development": [
+    "Category",
+    "Radar",
+    "Page_Name",
+    "Reference_URL",
+    "Geo_Locale_URL",
+    "Notes",
+    "Words_to_Translate",
+    "Words_to_Edit",
+    "Total_Words",
+    "Assignee",
+    "Type",
+    "Over_due_date",
+    "Writer_ISV",
+    "Graphic"
+  ]
+}

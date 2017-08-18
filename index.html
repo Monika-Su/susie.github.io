@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="style/style.css">
+    <!--<script src="scripts/Chart.bundle.js"></script>-->
+  <title>Overview</title>
+ </head>
+ <body>
+ <!--aside nav-->
+ <aside id="list">
+    <div class="selectValue col-md-2">
+       <ul class="list" id="func_list">
+      </ul>
+    </div>
+    <div style=" width: 88%; float: left;min-width: 960px;">
+        <div class="col-md-10" style="display: none">
+            <div class="col-md-3 chart-container">
+                <div class="charts">Development</div>
+                <canvas id="canvas"></canvas>
+            </div>
+            <div class="col-md-3 chart-container">
+                <div class="charts">Development</div>
+                <canvas id="canvas1"></canvas>
+            </div>
+            <div class="col-md-4 chart-container">
+                <div class="charts">Development</div>
+                <canvas id="canvas2"></canvas>
+            </div>
+        </div>
+        <div class="col-md-10 downlist">
+                <select name="dropdown" id="dueDate">
+                    <option value="Due Date">Due Date</option>
+                    <option value="8_27" >8/27</option>
+                    <option value="8_28">8/28</option>
+                    <option value="8_29">8/29</option>
+                    <option value="8_30">8/30</option>
+                    <option value="8_31">8/31</option>
+                    <option value="9_1">9/1</option>
+                    <option value="9_2">9/2</option>
+                </select>
+        </div>
+        <div id="tab" class="col-md-10" >
+            <ul>
+                <li id="over" class="active">Overview</li>
+                <li id="hk_en">HKEN</li>
+                <li id="cn">CN</li>
+                <li id="hk">HKTC</li>
+                <li id="tw">TW</li>
+                <li id="mo">MO</li>
+            </ul>
+        </div>
+        <div class="col-md-10" style="margin-bottom:30px">
+            <table class="overview_title">
+                <thead>
+                <tr >
+                    <th>Category</th>
+                    <th>Radar</th>
+                    <th>Assignee</th>
+                    <th>Geo Local URL</th>
+                    <th>Total Words</th>
+                    <th>Writer due date</th>
+                    <th>Over due date</th>
+                </tr>
+                </thead>
+                <tbody id="index_list"></tbody>
+            </table>
+        </div>
+    </div>
+   </aside>
+ <script type="text/javascript" src="scripts/jquery.min.js"></script>
+ <script type="text/javascript" src="scripts/main.js"></script>
+ </body>
+</html>

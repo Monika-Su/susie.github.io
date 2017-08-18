@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>producer</title>
+    <style>
+    </style>
+</head>
+<body class="producer-list">
+<div class="back">
+    <a href="index.html">&lt;&nbsp;Back</a>
+</div>
+<div id="nav">
+    <ul>
+        <!--<li  id="back" class="col-md-2"><a href="index.html">Back</a></li>-->
+        <li id="hk_en" class="col-md-2 text-center active">HKEN</li>
+        <li id="cn" class="col-md-2 text-center">CN</li>
+        <li id="hk" class="col-md-2 text-center">HKTC</li>
+        <li id="tw" class="col-md-2 text-center">TW</li>
+        <li id="mo" class="col-md-2 text-center">MO</li>
+    </ul>
+</div>
+<section class="col-md-12">
+    <div class="selectValue  col-md-2">
+        <ul id="check_list" class="list"></ul>
+    </div>
+    <div>
+        <button id="sideIcon">&lt;</button>
+    </div>
+    <div class="table">
+        <table border="1">
+            <thead>
+            <tr>
+                <th class="th_Category" rowspan="2">
+                    <ul>
+                        <li>Category</li>
+                    </ul></th>
+                <th class="th_Radar" rowspan="2">
+                    <ul>
+                        <li>Radar</li>
+                    </ul>
+                    </th>
+                <th class="th_Page_Name" rowspan="2">
+                    <ul>
+                        <li>Page_Name</li>
+                    </ul>
+                    </th>
+                <th class="th_Reference_URL" rowspan="2">
+                    <ul>
+                        <li>Reference_URL</li>
+                    </ul>
+                    </th>
+                <th class="th_Geo_Locale_URL" rowspan="2">
+                    <ul>
+                        <li>Geo_Locale_URL</li>
+                    </ul>
+                    </th>
+                <th class="th_Notes" rowspan="2">
+                    <ul>
+                        <li>Notes</li>
+                    </ul>
+                    </th>
+                <th class="th_WS_ID" rowspan="2">
+                    <ul>
+                        <li>WS ID</li>
+                    </ul>
+                </th>
+                <th class="th_WS_Task" rowspan="2">
+                    <ul>
+                        <li>WS Task</li>
+                    </ul>
+                </th>
+                <th class="th_Words_to_Translate" rowspan="2">
+                    <ul>
+                        <li>Words to Translate</li>
+                    </ul>
+                    </th>
+                <th class="th_Words_to_Edit" rowspan="2">
+                    <ul>
+                        <li>Words to Edits</li>
+                    </ul>
+                    </th>
+                <th class="th_Total_Words" rowspan="2">
+                    <ul>
+                        <li>Total Words</li>
+                    </ul>
+                    </th>
+                <th class="th_Assignee" rowspan="2">
+                    <ul>
+                        <li>Assignee</li>
+                    </ul>
+                </th>
+                <th class="th_Fresh_Eye" rowspan="2">
+                    <ul>
+                        <Li>Fresh Eye</Li>
+                    </ul>
+                </th>
+                <th class="th_CD_Review" rowspan="2">
+                    <ul>
+                        <li>CD Review</li>
+                    </ul>
+                </th>
+                <th class="th_Type" rowspan="2">
+                    <ul>
+                        <li>Type</li>
+                    </ul>
+                </th>
+                <th class="th_Over_due_date" rowspan="2">
+                    <ul>
+                        <li>Over due date</li>
+                    </ul>
+                </th>
+                <th class="th_Writer_ISV" colspan="2">
+                    <ul>
+                        <li>Writer ISV</li>
+                    </ul>
+                    </th>
+                <th class="th_CD_ISV" colspan="3">
+                    <ul>
+                        <li>CD ISV</li>
+                    </ul>
+                </th>
+                <th class="th_Art_CD_ISV" colspan="2">
+                    <ul>
+                        <li>Art CD ISV</li>
+                    </ul>
+                    </th>
+                <th class="th_XF_ISV" colspan="2">
+                    <ul>
+                        <li>XF ISV</li>
+                    </ul>
+                    </th>
+                <th class="th_Graphic" colspan="2">
+                    <ul>
+                        <li>Graphic</li>
+                    </ul>
+                    </th>
+            </tr>
+            <tr>
+            <th class="th_Writer_ISV">Ready for Writer ISV</th>
+            <th class="th_Writer_ISV">Due Date</th>
+            <th class="th_CD_ISV">Ready for Writer ISV</th>
+            <th class="th_CD_ISV">Due Date</th>
+            <th class="th_CD_ISV">Approved</th>
+            <th class="th_Art_CD_ISV">Ready for XF Review</th>
+            <th class="th_Art_CD_ISV">Approved</th>
+            <th class="th_XF_ISV">Ready for Writer ISV</th>
+            <th class="th_XF_ISV">Approved</th>
+            <th class="th_Graphic">Ready for Content ISV</th>
+            <th class="th_Graphic">Approved</th>
+            </tr>
+            </thead>
+            <tbody id="res_table"></tbody>
+        </table>
+    </div>
+</section>
+<script type="text/javascript" src="scripts/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/detail.js"></script>
+<script>
+    $("#sideIcon").click(function(e){
+        if ($(".selectValue").hasClass("navslid-hide")){
+            $(".selectValue").addClass('navslid-show');
+            $(".selectValue").removeClass('navslid-hide');
+        }
+        else if ($(".selectValue").hasClass("navslid-show")) {
+            $(".selectValue").addClass("navslid-hide");
+            $(".selectValue").removeClass("navslid-show");
+        }
+        else {
+            $(".selectValue").addClass("navslid-hide");
+        }
+    });
+</script>
+</body>
+</html>
